@@ -1,0 +1,14 @@
+{
+  "wither_storm:corrupted_dirt": {
+    "textures": "textures/blocks/corrupted_dirt"
+  },
+  "wither_storm:corrupted_stone": {
+    "textures": "textures/blocks/corrupted_stone"
+  },
+  "wither_storm:dark_leaves": {
+    "textures": "textures/blocks/dark_leaves"
+  },
+  "wither_storm:dark_log": {
+    "textures": "textures/blocks/dark_log"
+  }
+}

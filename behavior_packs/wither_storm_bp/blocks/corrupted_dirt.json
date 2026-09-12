@@ -1,0 +1,18 @@
+{
+  "format_version": "1.19.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "wither_storm:corrupted_dirt",
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:destroy_time": 0.5,
+      "minecraft:explosion_resistance": 0.5,
+      "minecraft:friction": 0.6,
+      "minecraft:map_color": "#1a1a1a",
+      "minecraft:crafting_table": {
+        "tag": "dirt"
+      }
+    }
+  }
+}
