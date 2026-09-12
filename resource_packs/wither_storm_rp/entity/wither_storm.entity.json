@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wither_storm:wither_storm",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/wither_storm"
+      },
+      "geometry": {
+        "default": "geometry.wither_storm"
+      },
+      "animations": {
+        "idle": "animation.wither_storm.idle",
+        "attack": "animation.wither_storm.attack",
+        "death": "animation.wither_storm.death",
+        "walk": "animation.wither_storm.walk"
+      },
+      "animation_controllers": [
+        {
+          "default": "controller.animation.wither_storm.default"
+        }
+      ],
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

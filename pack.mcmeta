@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Wither Storm Addon - Story Mode",
+    "name": "Wither Storm",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 19, 0]
+  },
+  "modules": [
+    {
+      "description": "Wither Storm Resource Pack",
+      "type": "resources",
+      "uuid": "12345678-1234-1234-1234-123456789012",
+      "version": [1, 0, 0]
+    }
+  ]
+}
