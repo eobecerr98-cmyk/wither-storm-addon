@@ -1,0 +1,19 @@
+{
+  "format_version": "1.19.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "wither_storm:dark_leaves",
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:destroy_time": 0.2,
+      "minecraft:explosion_resistance": 0.2,
+      "minecraft:friction": 0.2,
+      "minecraft:map_color": "#0a0a0a",
+      "minecraft:flammable": {
+        "catch_chance_modifier": 60,
+        "destroy_chance_modifier": 20
+      }
+    }
+  }
+}

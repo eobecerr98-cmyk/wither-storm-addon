@@ -1,0 +1,121 @@
+{
+  "format_version": "1.19.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "wither_storm:wither_storm",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "spawn_egg": {
+        "base_color": "#2d2d2d",
+        "overlay_color": "#00ff00"
+      }
+    },
+    "component_groups": {
+      "minecraft:wither_storm_phase_1": {
+        "minecraft:health": {
+          "value": 300,
+          "max": 300
+        },
+        "minecraft:attack": {
+          "damage": 10
+        },
+        "minecraft:movement": {
+          "value": 0.3
+        }
+      },
+      "minecraft:wither_storm_phase_2": {
+        "minecraft:health": {
+          "value": 200,
+          "max": 200
+        },
+        "minecraft:attack": {
+          "damage": 15
+        },
+        "minecraft:movement": {
+          "value": 0.5
+        }
+      },
+      "minecraft:wither_storm_phase_3": {
+        "minecraft:health": {
+          "value": 100,
+          "max": 100
+        },
+        "minecraft:attack": {
+          "damage": 20
+        },
+        "minecraft:movement": {
+          "value": 0.8
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["undead", "hostile", "boss", "wither_storm"]
+      },
+      "minecraft:collision_box": {
+        "width": 3.0,
+        "height": 4.5
+      },
+      "minecraft:movement": {
+        "value": 0.3
+      },
+      "minecraft:nameable": {},
+      "minecraft:health": {
+        "value": 300,
+        "max": 300
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/wither_storm.json"
+      },
+      "minecraft:experience_reward": {
+        "on_death": "100"
+      },
+      "minecraft:despawn": {
+        "despawn_from_simulation_edge": true,
+        "min_range_inactivity_timer": 32,
+        "min_inactivity_timer": 600
+      },
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "on_nearby_players": {
+              "max_dist": 100,
+              "min_dist": 0
+            },
+            "triggered_abilities": [
+              {
+                "ability": "minecraft:behavior.hurt_on_condition",
+                "filters": {
+                  "test": "in_water",
+                  "value": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "minecraft:behavior.hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_water",
+              "value": true
+            },
+            "cause": "in_fire"
+          }
+        ]
+      },
+      "minecraft:damage_over_time": {
+        "damage_per_tick": 0
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": ["minecraft:wither_storm_phase_1"]
+        }
+      }
+    }
+  }
+}

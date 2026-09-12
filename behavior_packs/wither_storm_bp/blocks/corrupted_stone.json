@@ -1,0 +1,15 @@
+{
+  "format_version": "1.19.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "wither_storm:corrupted_stone",
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:destroy_time": 1.2,
+      "minecraft:explosion_resistance": 1.2,
+      "minecraft:friction": 0.6,
+      "minecraft:map_color": "#0d0d0d"
+    }
+  }
+}

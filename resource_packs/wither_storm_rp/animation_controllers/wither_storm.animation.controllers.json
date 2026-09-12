@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.wither_storm.default": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "animations": ["idle"],
+          "transitions": [
+            {
+              "attacking": "query.is_attacking"
+            },
+            {
+              "walk": "query.ground_speed > 0.1"
+            }
+          ]
+        },
+        "walk": {
+          "animations": ["walk"],
+          "transitions": [
+            {
+              "idle": "query.ground_speed < 0.1"
+            },
+            {
+              "attacking": "query.is_attacking"
+            }
+          ]
+        },
+        "attacking": {
+          "animations": ["attack"],
+          "transitions": [
+            {
+              "idle": "!query.is_attacking"
+            }
+          ]
+        },
+        "death": {
+          "animations": ["death"]
+        }
+      }
+    }
+  }
+}

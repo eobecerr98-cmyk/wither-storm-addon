@@ -1,0 +1,19 @@
+{
+  "format_version": "1.19.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "wither_storm:dark_log",
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:destroy_time": 2.0,
+      "minecraft:explosion_resistance": 2.0,
+      "minecraft:friction": 0.6,
+      "minecraft:map_color": "#1a1a1a",
+      "minecraft:flammable": {
+        "catch_chance_modifier": 30,
+        "destroy_chance_modifier": 15
+      }
+    }
+  }
+}
